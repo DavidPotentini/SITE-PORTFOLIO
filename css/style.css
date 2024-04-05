@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@100..900&display=swap');
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: "EB Garamond", serif;
+}
+
+/*HEADER*/
+header{
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top:0;
+    width:100%;
+    z-index: 1;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:30px 50px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav a{
+    display: block;
+    margin: 0 25px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+nav ul a{
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: block;
+    color: whitesmoke;
+    transition:0.3s;
+}
+
+nav ul a:hover{
+    color: #B0C965  ;
+}
+
+nav ul a::after{
+    content: "";
+    background-color: #B0C965;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+nav ul a:hover::after{
+    width: 100%;
+}
+/*END HEADER*/
+
+/*HOME*/
+
+
+
+.home .container{
+   display: flex;
+   align-items: center;
+   margin-top: 200px;
+}
+.home a{
+    visibility: hidden;
+}
+
+.home .home-foto{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    padding-right: 50px;
+    
+    
+}
+
+.home .home-foto img{
+    width: 370px;
+    height: 400px;
+    border-radius: 100%;
+    transition: 0.5s;
+}
+
+.home .home-foto img:hover {
+    transform: scale(1.1);
+    
+}
+
+.home .home-text{
+    width:50%;
+    padding-right: 250px;
+}
+
+.home .home-text h1{
+    font-size: 40px;
+    
+}
+
+.home .texto-animado{
+    font-size: 33px;
+    font-weight: 300;
+}
+
+.home .texto-animado span{
+    position: relative;
+}
+
+.home .texto-animado span::before{
+    content: "";
+    color: #B0C965;
+    animation: palavras 8s infinite;
+}
+
+.home .texto-animado span::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left:2px solid #B0C965;
+    right: -10px;
+    animation: cursor .8s infinite, digita 20s steps(30) infinite;
+    width: calc(100% + 10px);
+    background-color: white;
+}
+
+@keyframes digita{
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width:0;
+    }
+
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+        width: calc(100% + 10px);
+    }
+}
+
+@keyframes cursor{
+    0%{
+        border-left:2px solid white;
+    }
+}
+
+@keyframes palavras{
+    0%,50%{
+        content: "Desenvolvedor";
+    }
+
+    51%,100%{
+        content: "Freelancer";
+    }
+
+
+
+}
+
+.home .home-text p{
+    font-size: 20px;
+}
+/*END HOME*/
+
+/*HABILIDADES*/
+.habilidades .container{
+    margin: 200px 0;
+}
+
+.habilidades .container h1{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.habilidades .container h2{
+    display: flex;
+    justify-content: center;
+}
+
+.habilidades .container p{
+    margin:15px 10px;
+}
+
+.habilidades .habilidade-cards{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.habilidades .card-item{
+    margin:15px;
+    border-radius: 14px;
+    background-color: #B0C965;
+    transition: 0.5s;
+    width: 500px;
+    
+}
+
+.habilidades .card-item:hover{
+    background-color: #909B4C;
+    transform: scale(1.1);
+}
+/*END HABILIDADES*/
+
+/*CONTATO*/
+.contato h1{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin:40px 0;
+}
+
+.contato .container{
+    display: flex;
+    justify-content: center;
+   
+}
+
+.contato input{
+    display: block;
+    font-size: 17px;
+    width:100%;
+    margin:15px 0;
+    padding: 15px 10px;
+    border: 2px solid #B0C965;
+    border-radius: 5px;
+}
+
+.contato textarea{
+    width: 100%;
+    margin: 15px 0;
+    font-size: 17px;
+    padding: 10px;
+    border:2px solid #B0C965;
+    border-radius:5px;
+    resize: none;
+}
+
+.btn{
+    background-color: #B0C965;
+    border:2px solid #B0C965;
+    padding: 15px 50px;
+    font-size: 17px;
+    float: right;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color:#909B4C;
+}
+
+.btn.animate-btn{
+    animation: animate-outline 1s ease-out infinite;
+}
+
+@keyframes animate-outline{
+    from{
+        outline: 0px solid #476A30;
+    }
+
+    to{
+        outline: 15px solid #4f9bf900;
+    }
+}
+/*END CONTATO*/
+footer .container{
+    background-color: #B0C965;
+    margin: 40px 0 0 0;
+    padding: 90px 0;
+}
+
+footer .links{
+    display: flex;
+    justify-content: center;
+}
+
+footer .links i{
+    font-size: 30px;
+    color: black;
+    padding: 5px;
+    margin: 0 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+footer .links i:hover{
+    margin-top: -5px;
+}
+
+footer p{
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    font-size: 18px;
+}
+/*FOOTER*/
+
+/*MENU MOBILE*/
+header .menu-icon{
+    font-size: 30px;
+    color: white;   
+    cursor: pointer;
+    display: none;
+}
+
+header .close-icon{
+    font-size: 30px;
+    color: white;
+    display: none;
+}
+/*END MENU MOBILE*/
+
+/*RESPOSIVIDADE*/
+@media (max-width: 800px){
+    .ul{
+        position: fixed;
+        top:0;
+        left: 0;
+        background-color: #909B4C;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle(0% at 100% 0);
+        transition: 0.7s;
+    }
+
+    .ul.open{
+        clip-path: circle(141.2% at 100% 0);
+    }
+    
+
+    .ul a{
+        padding: 15px;
+    }
+
+    header .menu-icon{
+        display: block;
+    }
+
+    header .close-icon{
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 1040px){
+    .home .container{
+        display: block;
+    }
+
+    .home .home-foto{
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+    }
+
+
+    .home .home-text{
+        width: 100%;
+        padding: 20px 50px;
+        display: inline-block;
+        
+    }
+
+    .home .home-text h1{
+        display: flex;
+        justify-content: center;
+    }
+
+    .home .home-text p{
+        display: flex;
+        justify-content: center;
+    }
+
+    .home .texto-animado{
+        display: flex;
+        justify-content: center;
+    }
+
+    .home .texto-animado span{
+        margin: 0 5px;
+    }
+
+}
+
+@media(max-width:500px){
+    .home .home-text h1{
+        font-size: 25px
+    }
+
+    .home .home-text h3{
+        font-size: 20px;
+    }
+}
+
+/*END RESPONSIVIDADE*/
+
