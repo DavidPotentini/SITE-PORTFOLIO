@@ -72,11 +72,10 @@ nav ul a:hover::after{
 .home .container{
    display: flex;
    align-items: center;
-   margin-top: 200px;
+   height: 70vh;
+   margin-top: 10rem;
 }
-.home a{
-    visibility: hidden;
-}
+
 
 .home .home-foto{
     width:50%;
@@ -85,6 +84,10 @@ nav ul a:hover::after{
     padding-right: 50px;
     
     
+}
+
+.home a{
+    visibility: hidden;
 }
 
 .home .home-foto img{
@@ -118,21 +121,21 @@ nav ul a:hover::after{
     position: relative;
 }
 
-.home .texto-animado span::before{
+.home .texto-animado span::after{
     content: "";
     color: #B0C965;
     animation: palavras 8s infinite;
 }
 
-.home .texto-animado span::after{
+.home .texto-animado span::before{
     content: "";
     position: absolute;
     height: 100%;
     border-left:2px solid #B0C965;
     right: -10px;
     animation: cursor .8s infinite, digita 20s steps(30) infinite;
-    width: calc(100% + 10px);
     background-color: white;
+    width: calc(100%+10px);
 }
 
 @keyframes digita{
@@ -170,8 +173,18 @@ nav ul a:hover::after{
 /*END HOME*/
 
 /*HABILIDADES*/
+.card-item .imagem img{
+    width: 10rem;
+    height: 10rem;
+    
+}
+.card-item .imagem{
+    display: flex;
+    justify-content: center;
+}
+
 .habilidades .container{
-    margin: 200px 0;
+    margin: 12.5rem 19rem;
 }
 
 .habilidades .container h1{
@@ -200,7 +213,7 @@ nav ul a:hover::after{
     border-radius: 14px;
     background-color: #B0C965;
     transition: 0.5s;
-    width: 500px;
+    width: 300px;
     
 }
 
@@ -260,6 +273,11 @@ nav ul a:hover::after{
 
 .btn.animate-btn{
     animation: animate-outline 1s ease-out infinite;
+}
+
+[name="contato"]{
+    visibility: hidden;
+    padding-top: 3rem;
 }
 
 @keyframes animate-outline{
@@ -395,6 +413,7 @@ header .close-icon{
         margin: 0 5px;
     }
 
+    
 }
 
 @media(max-width:500px){
@@ -405,6 +424,14 @@ header .close-icon{
     .home .home-text h3{
         font-size: 20px;
     }
+}
+
+@media(max-width:1280px){
+    .habilidades .container{
+        margin: 0;
+    }
+
+    
 }
 
 /*END RESPONSIVIDADE*/
