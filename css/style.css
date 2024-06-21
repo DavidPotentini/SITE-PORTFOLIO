@@ -169,6 +169,7 @@ nav ul a:hover::after{
 
 .home .home-text p{
     font-size: 20px;
+    display: flex;
 }
 /*END HOME*/
 
@@ -185,6 +186,7 @@ nav ul a:hover::after{
 
 .habilidades .container{
     margin: 12.5rem 19rem;
+
 }
 
 .habilidades .container h1{
@@ -423,6 +425,14 @@ header .close-icon{
 
     .home .home-text h3{
         font-size: 20px;
+    }
+}
+@media(max-width:1078px){ 
+    .home .home-text{
+        padding: 0 5px;
+    }
+    .habilidades h1{
+        padding-top: 7rem;
     }
 }
 
