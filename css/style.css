@@ -10,6 +10,7 @@
 }
 
 /*HEADER*/
+
 header{
     background: rgba(0, 0, 0, 0.9);
     position: fixed;
@@ -72,7 +73,6 @@ nav ul a:hover::after{
 .home .container{
    display: flex;
    align-items: center;
-   height: 70vh;
    margin-top: 10rem;
 }
 
@@ -376,7 +376,7 @@ header .close-icon{
     }
 }
 
-@media (max-width: 1040px){
+@media (max-width: 1000px){
     .home .container{
         display: block;
     }
@@ -387,6 +387,13 @@ header .close-icon{
         width: 100%;
     }
 
+    .home .home-foto img{
+    width: 310px;
+    height: 320px;
+    margin-bottom: 1rem;
+    border-radius: 100%;
+    transition: 0.5s;
+}
 
     .home .home-text{
         width: 100%;
